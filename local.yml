@@ -3,16 +3,11 @@
   connection: local 
   become: yes 
 
-  tasks:
+ pre_ tasks:
   - name: Apply Updates 
     dnf: 
       update_cache: yes
       update_only: yes
 
-  - name: Install packages
-    dnf: 
-      name:
-        - htop
-        - tmux
-        - mc 
-
+  tasks:
+  - include: task/packages.yml
