@@ -12,7 +12,7 @@
   - name: Install packages
     dnf: 
       name:
-	- htop
+        - htop
         - tmux
-	- mc
+        - mc 
 
