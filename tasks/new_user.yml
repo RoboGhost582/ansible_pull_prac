@@ -2,7 +2,7 @@
   user: 
     name: ansible_pull_test
     shell: /bin/bash 
-    group: root
+    groups: root
     password: "{{ 'labmachine' | password_hash('sha512') }}"
     append: yes
 
