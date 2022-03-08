@@ -10,4 +10,4 @@
       update_only: yes
 
   tasks: 
-    - include: task/packages.yml
+    - include: tasks/packages.yml
