@@ -4,7 +4,12 @@
   become: yes 
 
   tasks:
-  - name: 
+  - name: Apply Updates 
+    dnf: 
+      update_cache: yes
+      update_only: yes
+
+  - name: Install htop
     dnf: 
       name: htop
       
