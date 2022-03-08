@@ -3,7 +3,7 @@
   connection: local 
   become: yes 
 
- pre_tasks:
+ tasks:
   - name: Apply Updates 
     dnf: 
       update_cache: yes
