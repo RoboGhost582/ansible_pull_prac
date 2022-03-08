@@ -1,0 +1,11 @@
+---
+- host: localhost
+  connection: local 
+  become: yes 
+
+  task:
+  - name: 
+    dnf: 
+      name: htop
+      
+
