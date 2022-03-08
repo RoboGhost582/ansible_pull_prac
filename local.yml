@@ -3,11 +3,11 @@
   connection: local 
   become: yes 
 
- tasks:
+  pre_tasks:
   - name: Apply Updates 
     dnf: 
       update_cache: yes
       update_only: yes
 
-  tasks:
-  - include: task/packages.yml
+  tasks: 
+    - include: task/packages.yml
