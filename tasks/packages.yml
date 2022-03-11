@@ -1,7 +1,15 @@
-- name: Install packages
+- name: Install packages (CentOS)
   dnf: 
     name:
       - htop
       - tmux
       - mc 
+    when: ansible_distribution == 'CentOS'
 
+- name: Install packages (Ubuntu)
+  apt: 
+    name:
+      - htop
+      - tmux
+      - mc 
+    when: ansible_distribution == 'Ubuntu'

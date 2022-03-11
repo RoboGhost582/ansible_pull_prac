@@ -4,10 +4,16 @@
   become: yes 
 
   pre_tasks:
-  - name: Apply Updates 
+  - name: Apply Updates (CentOS)
     dnf: 
       update_cache: yes
       update_only: yes
+    when: ansible_distribution == 'CentOS'
+
+  - name: Apply Updates (Ubuntu)
+    dnf: 
+      update_cache: yes
+    when: ansible_distribution == 'Ubuntu'
 
   tasks: 
     - include: tasks/packages.yml

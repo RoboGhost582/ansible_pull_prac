@@ -1,6 +1,6 @@
 - name: Create New User
   user: 
-    name: ansible_pull_test
+    name: bryan
     shell: /bin/bash 
     groups: root
     password: "{{ 'labmachine' | password_hash('sha512') }}"
