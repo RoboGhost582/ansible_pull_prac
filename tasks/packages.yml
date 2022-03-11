@@ -12,4 +12,5 @@
       - htop
       - tmux
       - mc 
+      - net-tools
   when: ansible_distribution == 'Ubuntu'
