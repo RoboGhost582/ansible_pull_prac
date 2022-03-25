@@ -4,7 +4,8 @@
       - htop
       - tmux
       - mc 
-  when: ansible_distribution == 'CentOS'
+  when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+
 
 - name: Install packages (Ubuntu)
   apt: 
